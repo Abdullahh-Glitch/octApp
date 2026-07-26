@@ -1,10 +1,14 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "scheme": "your-app-scheme",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "name": "Octavia App",
+    "slug": "octavia-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Wolf2.jpeg",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
@@ -19,6 +23,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5c22a6dc-b9fb-4913-a98c-c5ab2efa9280"
+      }
+    },
+    "owner": "ab_e.007"
   }
 }
