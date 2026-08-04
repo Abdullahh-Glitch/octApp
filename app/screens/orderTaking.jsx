@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native'
-import React, {useState} from 'react'
-import {sendData} from '../apis/OrderTaker'
+import {Stack, useLocalSearchParams} from "expo-router";
+import React, {useState} from 'react';
+import {sendData} from '../../apis/OrderTaker';
 
 const orderTaking = () => {
+  const {title} = useLocalSearchParams();
   const [orderId, setOrderId] = useState('');
   const [orderName, setOrderName] = useState('');
   const [orderItems, setOrderItems] = useState('');
@@ -18,6 +20,14 @@ const orderTaking = () => {
     
 
   return (
+    <>
+
+    <Stack.Screen
+        options={{
+          title: title?.toString() || "Take Order",
+        }}
+      />
+
     <View style={{flex: 1,width: '100%', height: '100%', justifyContent: 'center', backgroundColor: 'lightyellow', alignItems: 'center'}}>
       <View style={{width: '70%', height: '55'}}>
         <Text style={{paddingLeft: 5}}>Order Id:</Text>
@@ -51,6 +61,7 @@ const orderTaking = () => {
         <Button title="Fetch Data" onPress={fetchHello} />
       </View>
     </View>
+    </>
   )
 }
 

@@ -11,6 +11,6 @@ export const getHello = async(data)=>{
 }
 export const sendData = async(data)=>{
     const {id, name, items} = data;
-    const result = await axios.post('http://192.168.10.6:5000/give',data);
+    const result = await axios.post('http://192.168.10.5:5000/give',data);
     console.log(result.data);
 }

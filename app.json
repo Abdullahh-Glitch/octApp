@@ -8,12 +8,13 @@
     "slug": "octavia-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/Wolf2.jpeg",
+    "icon": "./assets/android-icon-foreground.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -26,7 +27,8 @@
     },
     "plugins": [
       "expo-router",
-      "expo-status-bar"
+      "expo-status-bar",
+      "expo-font"
     ],
     "extra": {
       "router": {},
